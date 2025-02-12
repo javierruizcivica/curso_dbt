@@ -2,8 +2,8 @@ version: 2
 
 sources:
 
-  - name: GOOGLE_SHEETS # name of the source 
-    schema: GOOGLE_SHEETS # this is the schema our raw data lives in
+  - name: google_sheets # name of the source 
+    schema: google_sheets # this is the schema our raw data lives in
     database: ALUMNOX_DEV_BRONZE_DB # this is the name of our database
 
     quoting:
@@ -12,8 +12,8 @@ sources:
       identifier: false
 
     freshness:
-      warn_after: {count: 24, period: hour}
-      error_after: {count: 48, period: hour}
+      warn_after: {count: 2400, period: day}
+      error_after: {count: 10048, period: day}
 
     tables:
 
