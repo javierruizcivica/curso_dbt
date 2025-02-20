@@ -1,6 +1,6 @@
 with users as (
 
-    select * from {{ ref('stg_sql_server_dbo__users') }}
+    select * from {{ ref('stg_sql_server_dbo_users') }}
 
 ),
     
